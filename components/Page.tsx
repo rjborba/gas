@@ -12,6 +12,7 @@ export const Page: FC<{ children: ReactElement }> = ({ children }) => (
         height="calc(100% - 70px)"
         bgcolor="#f1f1f1"
         position="fixed"
+        border-right="1px solid #dbdbdb"
       >
         <Box
           paddingTop="100px"

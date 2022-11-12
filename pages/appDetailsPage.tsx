@@ -187,7 +187,7 @@ const NewAppPage = () => {
                 variant="outlined"
                 onClick={() => setIsRulesModalVisible(true)}
               >
-                NEW RULE
+                ADD RULE
               </Button>
             </Box>
             {/* Rules table */}
@@ -252,6 +252,7 @@ const NewAppPage = () => {
           <Box paddingTop={10} />
         </Box>
       </Page>
+      {/* Rules Modal */}
       <Dialog
         isOpen={isRulesModalVisible}
         onClose={() => {
@@ -323,6 +324,8 @@ const NewAppPage = () => {
           </Box>
         </Box>
       </Dialog>
+
+      {/* Contract Modal */}
       <Dialog
         isOpen={isContractModalVisible}
         onClose={() => {
@@ -332,22 +335,36 @@ const NewAppPage = () => {
         <Box display="flex" flexDirection={"row"} width={800}>
           <Box flex={1} padding={3}>
             <Box fontFamily="Montserrat" fontSize={24}>
-              New Rule
+              New Contract
             </Box>
             <Stack gap={2}>
               <TextField
                 autoComplete="off"
                 sx={{ marginTop: 4 }}
                 id="outlined-basic"
-                label="Description"
+                label="Name"
                 variant="outlined"
                 size="small"
               />
-              <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">
-                  Type of Rule
-                </InputLabel>
-                <Select
+              <TextField
+                autoComplete="off"
+                sx={{ marginTop: 1 }}
+                id="outlined-basic"
+                label="Address"
+                variant="outlined"
+                size="small"
+              />
+              <TextField
+                autoComplete="off"
+                sx={{ marginTop: 1 }}
+                id="outlined-basic"
+                label="Contract ABI"
+                variant="outlined"
+                size="small"
+                multiline
+                rows={8}
+              />
+              {/* <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
                   label="Blockchain"
@@ -355,8 +372,7 @@ const NewAppPage = () => {
                   <MenuItem value={"AMOUNT_OF_TRANSACTIONS"}>
                     Amount of Transactions
                   </MenuItem>
-                </Select>
-              </FormControl>
+                </Select> */}
             </Stack>
             <Box display="flex" justifyContent="end" pt={6}>
               <Button
@@ -376,7 +392,7 @@ const NewAppPage = () => {
           </Box>
           <Box bgcolor="#D9D9D9" width={300} padding={3}>
             <Box fontFamily="montserrat" fontSize={18} fontWeight={300}>
-              How Rules work
+              Why we need this
             </Box>
             <Box
               fontFamily="montserrat"
