@@ -120,9 +120,9 @@ const NewAppPage = () => {
                   Empty
                 </Box>
               ) : (
-                contracts.map((contract: any) => {
+                contracts.map((contract: any, index: number) => {
                   return (
-                    <>
+                    <Box display="flex" gap={4} key={`${index}-contract`}>
                       <Stack gap={1}>
                         <Box fontSize={14}>Name</Box>
                         <Box fontSize={14} fontWeight="300">
@@ -148,7 +148,7 @@ const NewAppPage = () => {
                           />
                         </Box>
                       </Stack>
-                    </>
+                    </Box>
                   );
                 })
               )}
@@ -202,9 +202,9 @@ const NewAppPage = () => {
                   Empty
                 </Box>
               ) : (
-                rules.map((rules: any) => {
+                rules.map((rules: any, index: number) => {
                   return (
-                    <Box display="flex" gap={4}>
+                    <Box display="flex" gap={4} key={`${index}-rule`}>
                       <Stack gap={1}>
                         <Box fontSize={14}>Description</Box>
                         <Box fontSize={14} fontWeight="300">
