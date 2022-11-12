@@ -1,5 +1,5 @@
 {
-  "name": "gasbit",
+  "name": "gas",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.10.9",
+    "@mui/material": "^5.10.13",
+    "@next/font": "^13.0.2",
+    "mui": "^0.0.1",
     "next": "13.0.2",
     "react": "18.2.0",
     "react-dom": "18.2.0"
